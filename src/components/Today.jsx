@@ -1,4 +1,5 @@
 export default function Today() {
+    let date = new Date();
   return (
     <div className="today">
       <div className="today'sDate">

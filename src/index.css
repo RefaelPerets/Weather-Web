@@ -1,6 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+.daytime{
+  background-size: cover;
+  background-position: bottom;
+  background-image: url("/images/dayBackground.png");
+}
+
+.nighttime{
+  background-size: cover;
+  background-position: bottom;
+  background-image: url("/images/nightBackground.png");
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5d5c715a ;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header .day h1{
+  color: #484848;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+header .night h1{
+  color: #f7f7f7;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+  width: 10vh;
+  padding: 0;
+  margin: 0;
 }
 
 footer {
@@ -12,20 +62,6 @@ footer {
 }
 
 footer p {
-  color: #ccc;
+  color: #236bb3;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #393846;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-  color: #fff;
-  font-family: "McLaren", cursive;
-  font-weight: 200;
-}
