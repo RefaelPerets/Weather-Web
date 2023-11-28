@@ -7,14 +7,15 @@ const Today = (props) => {
   return (
     <div className="container-today">
       <div>
-        <h3>{day}</h3>
-        <h3>{new Date().toLocaleDateString()}</h3>
+        <h1>{day}</h1>
+        <br/>
+        <h1>{new Date().toLocaleDateString()}</h1>
       </div>
       <div>
         <img src={`/icons/${getWeatherPicture(weatherCode)}`} alt="img-weather" />
       </div>
       <div>
-        <h4>{`${temperatureMin}° / ${temperatureMax}°`}</h4>
+        <h2>{`${temperatureMin}° / ${temperatureMax}°`}</h2>
       </div>
     </div>
   );

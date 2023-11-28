@@ -7,7 +7,6 @@ import Today from "./components/Today";
 import NextDays from "./components/NextDays";
 import { getDayOfWeek, getWeather } from "./functions/getWeather";
 
-
 const App = () => {
   const [isDaytime] = useDayNight();
   const [weatherData, setWeatherData] = useState({
@@ -23,38 +22,39 @@ const App = () => {
       setWeatherData(weather);
     };
     fetchData();
-
   }, []);
   document.body.className = isDaytime ? "daytime" : "nighttime";
 
   return (
-    <div>
+    <div className="general">
       <Header />
-      <Footer />
-      <Today
-        day={getDayOfWeek(new Date().getDay())}
-        weatherCode={weatherData.weatherCode[0]}
-        temperatureMax={weatherData.temperatureMax[0]}
-        temperatureMin={weatherData.temperatureMin[0]}
-      />
-      <div className="container-next-days">
-        {[1, 2, 3].map((index) => {
-          const nextDayIndex = new Date().getDay() + index;
-          const nextDayDate = new Date();
-          nextDayDate.setDate(nextDayDate.getDate() + index);
+      <div className="days">
+        <Today
+          day={getDayOfWeek(new Date().getDay())}
+          weatherCode={weatherData.weatherCode[0]}
+          temperatureMax={weatherData.temperatureMax[0]}
+          temperatureMin={weatherData.temperatureMin[0]}
+        />
+        <div className="container-next-days">
+          {[1, 2, 3].map((index) => {
+            const nextDayIndex = new Date().getDay() + index;
+            const nextDayDate = new Date();
+            nextDayDate.setDate(nextDayDate.getDate() + index);
 
-          return (
-            <NextDays
-              key={index}
-              day={getDayOfWeek(nextDayIndex)}
-              date={nextDayDate.toLocaleDateString()}
-              weatherCode={weatherData.weatherCode[index]}
-              temperatureMax={weatherData.temperatureMax[index]}
-              temperatureMin={weatherData.temperatureMin[index]}
-            />
-          );
-        })}
+            return (
+              <NextDays
+                key={index}
+                day={getDayOfWeek(nextDayIndex)}
+                date={nextDayDate.toLocaleDateString()}
+                weatherCode={weatherData.weatherCode[index]}
+                temperatureMax={weatherData.temperatureMax[index]}
+                temperatureMin={weatherData.temperatureMin[index]}
+              />
+            );
+          })}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
