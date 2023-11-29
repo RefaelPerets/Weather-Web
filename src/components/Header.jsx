@@ -36,10 +36,10 @@ export default function Header() {
         <img src="/images/Weather big logo.png" alt="" />
       </div>
       <div className={`webName ${isDaytime ? 'day' : 'night'}`} >
-        <h1>Local Weather</h1>
+        <h1>Weather</h1>
       </div>
       <div className={`date ${isDaytime ? 'day' : 'night'}`}>
-        <h1>{location.countryCapital}</h1>
+        <h1>{location.city}</h1>
       </div>
     </header>
   );

@@ -13,7 +13,7 @@ const NextDays = (props) => {
         <img src={`/icons/${getWeatherPicture(props.weatherCode)}`} alt="img-weather" />
       </div>
       <div>
-        <h2>{`${props.temperatureMin}° / ${props.temperatureMax}°`}</h2>
+        <h2>{`${props.temperatureMin}° - ${props.temperatureMax}°`}</h2>
       </div>
     </div>
   );

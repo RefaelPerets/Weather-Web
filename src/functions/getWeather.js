@@ -2,7 +2,7 @@ import getLocation from "./getLocation";
 
 const getWeatherPicture = (weatherCode) => {
   const picture = {
-    0: "clear.svg",
+    0: "sunny.svg",
     1: "cloudy.svg",
     2: "cloudy-2.svg",
     3: "cloudy-3.svg",
@@ -52,6 +52,7 @@ const getDayOfWeek = (dayIndex) => {
 const getWeather = async () => {
   try {
     const location = await getLocation();
+    console.log(location);
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Africa%2FCairo&forecast_days=4`;
     const responseWeather = await fetch(url);
     const dataWeather = await responseWeather.json();
