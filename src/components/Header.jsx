@@ -38,7 +38,7 @@ export default function Header() {
       <div className={`webName ${isDaytime ? 'day' : 'night'}`} >
         <h1>Weather</h1>
       </div>
-      <div className={`date ${isDaytime ? 'day' : 'night'}`}>
+      <div className={`local ${isDaytime ? 'day' : 'night'}`}>
         <h1>{location.city}</h1>
       </div>
     </header>

@@ -36,7 +36,7 @@ const App = () => {
           temperatureMin={weatherData.temperatureMin[0]}
         />
         <div className="container-next-days">
-          {[1, 2, 3].map((index) => {
+          {[1, 2, 3, 4].map((index) => {
             const nextDayIndex = new Date().getDay() + index;
             const nextDayDate = new Date();
             nextDayDate.setDate(nextDayDate.getDate() + index);

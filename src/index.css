@@ -38,19 +38,31 @@ header {
   height: 10%;
 }
 
-header .day h1{
+header .webName.day h1{
   color: #484848;
   font-family: "McLaren", cursive;
-  font-weight: 200;
+  font-size: 55px; 
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #4682b4, -2px -2px 4px #4682b4, 2px -2px 4px #4682b4, -2px 2px 4px #4682b4;
 }
 
-header .night h1{
+header .webName.night h1{
+  color: rgb(163, 221, 253);
+  font-family: "McLaren", cursive;
+  font-size: 55px; 
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #4682b4, -2px -2px 4px #4682b4, 2px -2px 4px #4682b4, -2px 2px 4px #4682b4;
+}
+
+header .local.night h1{
   color: #f7f7f7;
   font-family: "McLaren", cursive;
-  font-weight: 200;
 }
 
-
+header .local.day h1{
+  color: #484848;
+  font-family: "McLaren", cursive;
+}
 
 .logo {
   display: flex;
@@ -61,7 +73,6 @@ header .night h1{
 }
 
 .days{
-  /* background-color: #484848; */
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -73,22 +84,52 @@ header .night h1{
 
 
 .container-today{
-  width: 35%;
+  width: 30%;
   height: 60%;
   display: flex;
-  flex-direction: column;
-  justify-content:space-evenly;
+  flex-direction: row;
+  justify-content:space-between;
   align-items: center;
   border-radius: 20px;
   background: rgb(34,193,195);
   background: radial-gradient(circle, rgba(104, 171, 209, 0.432) 45%, rgba(247, 196, 86, 0.463) 100%);
-  box-shadow: rgb(85, 105, 126) 0px 20px 30px -10px;  margin: 2%;
+  box-shadow: rgb(85, 105, 126) 0px 20px 30px -10px;
 }
+
+.inner-left-day-container{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  font-family: 'Arial', sans-serif; 
+  font-size: 55px; 
+  font-weight: bold;
+  text-align: center; 
+  text-shadow: 2px 2px 4px #4682b4, -2px -2px 4px #4682b4, 2px -2px 4px #4682b4, -2px 2px 4px #4682b4;
+}
+
+.inner-center-day-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.inner-right-day-container{
+  width: 30%;
+  height: 100%;
+
+}
+
 .container-next-days{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 50%;
   height: 60%;
 }
 
@@ -102,7 +143,8 @@ header .night h1{
   border-radius: 20px;
   background: rgb(34,193,195);
   background: radial-gradient(circle, rgba(104, 171, 209, 0.432) 45%, rgba(247, 196, 86, 0.463) 100%);
-  box-shadow: rgb(85, 105, 126) 0px 20px 30px -10px;  margin: 2%;
+  box-shadow: rgb(85, 105, 126) 0px 20px 30px -10px;
+  margin: 0% 2%;
 }
 
 footer {
