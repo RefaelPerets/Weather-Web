@@ -73,9 +73,9 @@ const getWeather = async () => {
       weatherCode: [0, 0, 0, 0, 0],
       temperatureMax: [0, 0, 0, 0, 0],
       temperatureMin: [0, 0, 0, 0, 0],
-      windDirection:  [0, 0, 0, 0, 0],
+      precipitation: [0, 0, 0, 0, 0],
       windSpeed: [0, 0, 0, 0, 0],
-      precipitation: [0, 0, 0, 0, 0]
+      windDirection:  [0, 0, 0, 0, 0],
     };
   }
 };
