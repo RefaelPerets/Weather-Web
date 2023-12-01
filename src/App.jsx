@@ -13,6 +13,9 @@ const App = () => {
     weatherCode: [0, 0, 0, 0],
     temperatureMax: [0, 0, 0, 0],
     temperatureMin: [0, 0, 0, 0],
+    precipitation: [0, 0, 0, 0],
+    windSpeed: [0, 0, 0, 0],
+    windDirection: [0, 0, 0, 0],
   });
 
   useEffect(() => {
@@ -34,6 +37,9 @@ const App = () => {
           weatherCode={weatherData.weatherCode[0]}
           temperatureMax={weatherData.temperatureMax[0]}
           temperatureMin={weatherData.temperatureMin[0]}
+          precipitation={weatherData.precipitation[0]}
+          windSpeed={weatherData.windSpeed[0]}
+          windDirection={weatherData.windDirection[0]}
         />
         <div className="container-next-days">
           {[1, 2, 3, 4].map((index) => {
