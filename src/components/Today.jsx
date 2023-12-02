@@ -27,14 +27,14 @@ const Today = (props) => {
       </div>
       <div className="inner-right-day-container">
         <div>
-        <h4>Precipitation sum:</h4>
+        <h3>Precipitation sum:</h3>
         <h2>{`${precipitation}`}</h2>
         </div>
         <div>
-        <h4>Wind speed max:</h4>
+        <h3>Wind speed max:</h3>
         <h2>{`${windSpeed}`}</h2>
         </div><div>
-        <h4>Wind direction:</h4>
+        <h3>Wind direction:</h3>
         <h2>{`${windDirection}`}</h2>
         </div>
       </div>
