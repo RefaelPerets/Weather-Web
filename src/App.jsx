@@ -28,6 +28,44 @@ const App = () => {
   }, []);
   document.body.className = isDaytime ? "daytime" : "nighttime";
 
+  if  (window.screen.width < 600) {
+    return(
+      <div className="general">
+      <Header />
+      <div className="mobile-days">
+        <Today
+          day={getDayOfWeek(new Date().getDay())}
+          weatherCode={weatherData.weatherCode[0]}
+          temperatureMax={weatherData.temperatureMax[0]}
+          temperatureMin={weatherData.temperatureMin[0]}
+          precipitation={weatherData.precipitation[0]}
+          windSpeed={weatherData.windSpeed[0]}
+          windDirection={weatherData.windDirection[0]}
+        />
+        <div className="mobile-container-next-days">
+          {[1, 2, 3, 4].map((index) => {
+            const nextDayIndex = new Date().getDay() + index;
+            const nextDayDate = new Date();
+            nextDayDate.setDate(nextDayDate.getDate() + index);
+
+            return (
+              <NextDays
+                key={index}
+                day={getDayOfWeek(nextDayIndex)}
+                date={nextDayDate.toLocaleDateString()}
+                weatherCode={weatherData.weatherCode[index]}
+                temperatureMax={weatherData.temperatureMax[index]}
+                temperatureMin={weatherData.temperatureMin[index]}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <Footer />
+    </div>
+    )
+  }
+
   return (
     <div className="general">
       <Header />

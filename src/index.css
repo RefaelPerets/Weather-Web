@@ -33,7 +33,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #5d5c715a ;
-  padding: 16px 32px;
+  padding: 1% 2%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   height: 10%;
 }
@@ -64,12 +64,30 @@ header .local.day h1{
   font-family: "McLaren", cursive;
 }
 
+header .mobile-local.day h2{
+  color: #484848;
+  font-family: "McLaren", cursive;
+}
+
+header .mobile-local.night h2{
+  color: #f7f7f7;
+  font-family: "McLaren", cursive;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 10vh;
   width: 10vh;
+}
+
+.mobile-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80%;
+  width: 80%;
 }
 
 .days{
@@ -82,6 +100,15 @@ header .local.day h1{
   justify-content:space-evenly;
 }
 
+.mobile-days{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 84%;
+  justify-content:space-evenly;
+}
 
 .container-today{
   width: 30%;
@@ -132,6 +159,15 @@ header .local.day h1{
 
 .container-next-days{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 60%;
+}
+
+.mobile-container-next-days{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
