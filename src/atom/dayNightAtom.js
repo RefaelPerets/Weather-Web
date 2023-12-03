@@ -7,3 +7,4 @@ export const dayNightAtom = atom((get) => {
 });
 
 export const useDayNight = () => useAtom(dayNightAtom);
+
