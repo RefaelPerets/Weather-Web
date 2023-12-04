@@ -44,7 +44,8 @@ const App = () => {
         windDirection={weatherData.windDirection[0]}
       />
       <div className={`container-next-days ${isMobile ? "mobile" : ""}`}>
-        {[1, 2, 3, 4].map((index) => {
+        {
+        [1, 2, 3, 4].map((index) => {
           const nextDayIndex = new Date().getDay() + index;
           const nextDayDate = new Date();
           nextDayDate.setDate(nextDayDate.getDate() + index);
