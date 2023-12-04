@@ -1,11 +1,14 @@
 import React from "react";
 import { getWeatherPicture } from "../functions/getWeather";
+import { useMobileScreen } from "../atom/isMobileAtom";
+
 
 const Today = (props) => {
   const { day, weatherCode, temperatureMax, temperatureMin, precipitation, windSpeed, windDirection } = props;
+  const [isMobile] = useMobileScreen();
 
   return (
-    <div className="container-today">
+    <div className={`container-today ${isMobile ? "mobile" : ""}`}>
       <h1 className="inner-left-day-container">
         T<br />O<br />D<br />A<br />Y
       </h1>

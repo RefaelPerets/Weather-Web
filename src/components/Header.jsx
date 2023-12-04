@@ -32,7 +32,7 @@ export default function Header() {
   }
 
   return (
-    <header>
+    <header className={isMobile ? "mobile" : ""}>
       <div className={`logo ${isMobile ? "mobile" : ""}`}>
         <img src="/images/Weather big logo.png" alt="" />
       </div>

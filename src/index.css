@@ -38,6 +38,18 @@ header {
   height: 10%;
 }
 
+header.mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5d5c715a ;
+  padding: 1% 2%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  height: 10%;
+  margin-bottom: 23%;
+}
+
 header .webName.day h1{
   color: #484848;
   font-family: "McLaren", cursive;
@@ -104,8 +116,7 @@ header .mobile-local.night h2{
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
-  width: 85%;
+  align-items: center;  
   height: 100%;
   justify-content:space-evenly;
 }
@@ -113,6 +124,20 @@ header .mobile-local.night h2{
 .container-today{
   width: 30%;
   height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  border-radius: 20px;
+  background: rgb(34,193,195);
+  background: radial-gradient(circle, rgba(104, 171, 209, 0.432) 45%, rgba(247, 196, 86, 0.463) 100%);
+  box-shadow: rgb(85, 105, 126) 0px 20px 30px -10px;
+}
+
+.container-today.mobile{
+  width: 90%;
+  height: 60%;
+  margin: 7%;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -170,11 +195,25 @@ header .mobile-local.night h2{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 60%;
+  width:90%;
+  height: 100%;
 }
 
 .next-days{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgb(34,193,195);
+  background: radial-gradient(circle, rgba(104, 171, 209, 0.432) 45%, rgba(247, 196, 86, 0.463) 100%);
+  box-shadow: rgb(85, 105, 126) 0px 20px 30px -10px;
+  margin: 0% 2%;
+}
+
+.next-days.mobile{
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;

@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getWeatherPicture } from "../functions/getWeather";
+import { useMobileScreen } from "../atom/isMobileAtom";
+
 
 const NextDays = (props) => {
+  const [isMobile] = useMobileScreen();
+
   return (
-    <div className="next-days">
+    <div className={`next-days ${isMobile ? "mobile" : ""}`}>
       <div>
         <h1>{props.day}</h1>
         <br/>
