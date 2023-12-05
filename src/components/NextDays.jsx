@@ -9,15 +9,15 @@ const NextDays = (props) => {
     <div className={`next-days ${isMobile ? "mobile" : ""}`}>
       {isMobile ? (
         <div>
-          <h2>{props.day}</h2>
+          <p>{props.day}</p>
           <br />
-          <h2>{props.date}</h2>
+          <p>{props.date}</p>
         </div>
       ) : (
         <div>
-          <h1>{props.day}</h1>
+          <p>{props.day}</p>
           <br />
-          <h1>{props.date}</h1>
+          <p>{props.date}</p>
         </div>
       )}
       <div>
@@ -27,7 +27,7 @@ const NextDays = (props) => {
         />
       </div>
       <div>
-        <h2>{`${props.temperatureMin}° - ${props.temperatureMax}°`}</h2>
+        <p>{`${props.temperatureMin}° - ${props.temperatureMax}°`}</p>
       </div>
     </div>
   );

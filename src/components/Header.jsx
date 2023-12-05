@@ -41,15 +41,15 @@ export default function Header() {
           <h1>Weather</h1>
         </div>
       )}
-      {isMobile ? (
+      {/* {isMobile ? (
         <div className={`mobile-local ${isDaytime ? "day" : "night"}`}>
           <h2>{location.city}</h2>
         </div>
-      ) : (
+      ) : ( */}
         <div className={`local ${isDaytime ? "day" : "night"}`}>
-          <h1>{location.city}</h1>
+          <p>{location.city}</p>
         </div>
-      )}
+      {/* )} */}
     </header>
   );
 }
